@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden
+}
+
+.ant-image {
+    width: 100%;
+}
+
+.ant-form-item-explain {
+    text-align: left;
+}
+
+.main-container {
+    flex: 1;
+    width: 100%;
+    padding: 1.5rem 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 16px;
+}
+
+.room-carousel__container {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 40px auto;
+}
+
+.ant-row.service__container {
+    margin: 0 auto!important;
+}
+
+.ant-col-md-12 {
+    height: 100%;
+}
+
+
+
+

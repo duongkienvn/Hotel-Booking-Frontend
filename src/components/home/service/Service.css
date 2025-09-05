@@ -1,0 +1,66 @@
+/* Services.css */
+
+.services-hero-section {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.services-hero-section .hero-title,
+.services-hero-section .hero-subtitle {
+    color: #fff;
+    z-index: 1;
+}
+
+.services-hero-section .hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.services-hero-section .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.section {
+    margin-bottom: 60px;
+}
+
+.service-card {
+    text-align: center;
+    padding: 24px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .services-hero-section .hero-title {
+        font-size: 2.5rem;
+    }
+    .services-hero-section .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .ant-layout-content {
+        padding: 20px !important;
+    }
+    .responsive-order {
+        order: 2;
+    }
+}
