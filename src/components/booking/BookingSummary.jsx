@@ -23,7 +23,7 @@ const BookingSummary = ({booking, payment, isFormValid, onConfirm}) => {
       setIsProcessingPayment(false);
       setIsBookingConfirmed(true);
       onConfirm();
-    }, 3000);
+    }, 1000);
   };
 
   useEffect(() => {

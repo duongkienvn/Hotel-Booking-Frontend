@@ -29,14 +29,22 @@ const RoomCarousel = () => {
   if (errorMessage) {
     return <div className="text-danger mb-5 mt-5">Error : {errorMessage}</div>;
   }
-  //
-  // if (isLoading) {
-  //   return <Spin tip={"Loading rooms"} fullscreen size={"large"} />;
-  // }
 
   return (
     isLoading ? (
-      <Spin tip={"Loading rooms"} size={"large"}/>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: 400,
+          marginTop: "1rem",
+        }}
+      >
+        <Spin size={"large"}>
+          <div style={{marginTop: 60}}>Loading Rooms</div>
+        </Spin>
+      </div>
     ) : (
       <>
         <section

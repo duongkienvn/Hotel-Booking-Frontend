@@ -32,7 +32,7 @@ const Checkout = () => {
           setError(error.message || "Failed to load room")
           setIsLoading(false)
         })
-    }, 1000)
+    }, 100)
   }, [roomId])
 
   const services = [

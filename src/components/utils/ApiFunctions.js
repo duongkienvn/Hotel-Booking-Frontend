@@ -320,6 +320,7 @@ export async function getUserAvatar(imageUrl) {
       responseType: "blob"
     });
     const url = URL.createObjectURL(response.data);
+    console.log(url);
     return url;
   } catch (error) {
     throw new Error(error.response.data.message);
