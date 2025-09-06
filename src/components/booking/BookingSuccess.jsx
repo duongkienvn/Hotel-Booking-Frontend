@@ -13,7 +13,7 @@ const BookingSuccess = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(!isLoading);
-    }, 500)
+    }, 2500)
   }, []);
 
   return (

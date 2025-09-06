@@ -21,7 +21,6 @@ const RoomFilter = ({criteria, setCriteria}) => {
     fetchAllRoomTypes();
   }, []);
 
-
   const clearFilter = () => {
     form.resetFields();
     setCriteria({});

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {Link, NavLink, useLocation} from "react-router-dom";
+import {Link, NavLink, useLocation, useSearchParams} from "react-router-dom";
 import {Button, Drawer, Dropdown, Layout, Menu, Space, Typography} from "antd";
 import {DownOutlined, MenuOutlined, UserAddOutlined, UserOutlined} from "@ant-design/icons";
 import Logout from "../auth/Logout";
@@ -17,19 +17,14 @@ const NavBar = () => {
   const auth = useAuth();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
+  const [searchParams] = useSearchParams();
+  const encodedToken = searchParams.get("token");
 
   useEffect(() => {
-    const cookies = document.cookie.split("; ").reduce((acc, cookieStr) => {
-      const [key, value] = cookieStr.split("=");
-      acc[key] = value;
-      return acc;
-    }, {});
-
-    const token = cookies["token"];
-    if (token) {
+    if (encodedToken) {
+      const token = decodeURIComponent(encodedToken);
+      window.history.replaceState({}, document.title, window.location.pathname);
       auth.handleLogin(token);
-      document.cookie = "token=; path=/; max-age=0;";
     }
   }, []);
 
