@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://localhost:8081/api/v1"
+  baseURL: import.meta.env.VITE_BACKEND_URL + "/api/v1"
 });
 
 export async function addRoom(photo, roomType, roomPrice) {

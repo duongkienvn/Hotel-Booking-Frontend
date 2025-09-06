@@ -11,7 +11,6 @@ import FindBooking from "../components/booking/FindBooking.jsx";
 import Login from "../components/auth/Login.jsx";
 import Registration from "../components/auth/Registration.jsx";
 import Profile from "../components/auth/Profile.jsx";
-import Logout from "../components/auth/Logout.jsx";
 import Admin from "../components/admin/Admin.jsx";
 import About from "../components/home/about/About.jsx";
 import Services from "../components/home/service/Services.jsx";
@@ -77,7 +76,7 @@ export const routes = [
         element: <Registration/>
       },
       {
-        element: <PrivateRoutes />,
+        element: <PrivateRoutes/>,
         children: [
           {
             path: "book-room/:roomId",
@@ -132,7 +131,7 @@ export const routes = [
       },
       {
         path: "*",
-        element: <NotFoundPage />
+        element: <NotFoundPage/>
       }
     ]
   },

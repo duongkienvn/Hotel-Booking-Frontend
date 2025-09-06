@@ -3,11 +3,11 @@ import React from "react";
 
 function Oauth2Client() {
   const googleLogin = () => {
-    window.location.href = "http://localhost:8081/oauth2/authorization/google";
+    window.location.href = import.meta.env.VITE_BACKEND_URL + "/oauth2/authorization/google";
   }
 
   const facebookLogin = () => {
-    window.location.href = "http://localhost:8081/oauth2/authorization/facebook";
+    window.location.href = import.meta.env.VITE_BACKEND_URL + "/oauth2/authorization/facebook";
   }
 
   return <>
