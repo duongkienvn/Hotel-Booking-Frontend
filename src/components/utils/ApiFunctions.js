@@ -37,6 +37,7 @@ export async function getAvailableRooms() {
   }
 }
 
+
 export async function verifyAccount(token) {
   try {
     const response = await api.get("/auth/verify/account", {
