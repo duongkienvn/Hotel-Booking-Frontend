@@ -355,8 +355,7 @@ export async function getBookingsByUserId(userId, token) {
     })
     return response.data
   } catch (error) {
-    console.error("Error fetching bookings:", error.message)
-    throw new Error("Failed to fetch bookings")
+    throw new Error("Failed to fetch bookings: " + error.response.data.message);
   }
 }
 

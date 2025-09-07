@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, Typography } from "antd";
 import { motion } from "framer-motion";
-import parrall from "../../assets/images/parrall.jpg";
+import parrall from "../../assets/images/istockphoto-2165635291-612x612.webp";
 import resort from "../../assets/images/life-resort-hotel-resort-hotel-wallpaper-preview.jpg";
 
 const { Content } = Layout;

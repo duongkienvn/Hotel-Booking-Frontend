@@ -81,8 +81,7 @@ const Profile = () => {
         const response = await getBookingsByUserId(userId, token)
         setBookings(response)
       } catch (error) {
-        console.error("Error fetching bookings:", error.message)
-        setErrorMessage(error.message)
+        setErrorMessage(error.message);
       }
     }
     fetchBookings()
@@ -98,8 +97,7 @@ const Profile = () => {
       navigate("/")
       window.location.reload()
     } catch (error) {
-      message.error("Failed to delete account")
-      setErrorMessage(error.message)
+      setErrorMessage(error.message);
     }
   }
 
@@ -247,7 +245,7 @@ const Profile = () => {
               }/>
             )}
 
-            <div className="mt-4 text-center">
+            <Space direction="vertical">
               <Space>
                 <Button
                   type="primary"
@@ -255,6 +253,7 @@ const Profile = () => {
                 >
                   Update Information
                 </Button>
+
                 {bookings.length > 0 && (
                   <>
                     <Modal
@@ -269,39 +268,37 @@ const Profile = () => {
                         <Form.Item
                           name="rating"
                           label="Rating"
-                          rules={[{required: true, message: "Please give a rating"}]}
+                          rules={[{ required: true, message: "Please give a rating" }]}
                         >
-                          <Rate/>
+                          <Rate />
                         </Form.Item>
                         <Form.Item
                           name="content"
                           label="Your Review"
-                          rules={[{required: true, message: "Please enter your review"}]}
+                          rules={[{ required: true, message: "Please enter your review" }]}
                         >
-                          <Input.TextArea rows={7} placeholder="Share your experience..."/>
+                          <Input.TextArea rows={7} placeholder="Share your experience..." />
                         </Form.Item>
                       </Form>
                     </Modal>
-                    <Button
-                      type="primary"
-                      onClick={() => setIsModalOpen(true)}
-                    >
+                    <Button type="primary" onClick={() => setIsModalOpen(true)}>
                       Write Review
                     </Button>
                   </>
                 )}
-                <Popconfirm
-                  title="Are you sure to delete this account?"
-                  onConfirm={handleDeleteAccount}
-                  okText="Yes"
-                  cancelText="No"
-                >
-                  <Button type="primary" danger>
-                    Delete Account
-                  </Button>
-                </Popconfirm>
               </Space>
-            </div>
+
+              <Popconfirm
+                title="Are you sure to delete this account?"
+                onConfirm={handleDeleteAccount}
+                okText="Yes"
+                cancelText="No"
+              >
+                <Button type="primary" danger>
+                  Delete Account
+                </Button>
+              </Popconfirm>
+            </Space>
           </Card>
         ) : (
           <Spin tip={"Loading user data..."} fullscreen/>
