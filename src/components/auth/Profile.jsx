@@ -237,7 +237,7 @@ const Profile = () => {
                 dataSource={bookings}
                 rowKey="id"
                 bordered
-                className="mt-3"
+                scroll={{ x: "max-content" }}
               />
             ) : (
               <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} description={
