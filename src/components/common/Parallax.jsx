@@ -3,6 +3,7 @@ import { Layout, Typography } from "antd";
 import { motion } from "framer-motion";
 import parrall from "../../assets/images/istockphoto-536141357-612x612.webp";
 import resort from "../../assets/images/life-resort-hotel-resort-hotel-wallpaper-preview.jpg";
+import welcome from "../../assets/images/vietgoing_plo2208239073.webp";
 
 const { Content } = Layout;
 const { Title } = Typography;
@@ -14,13 +15,13 @@ const Parallax = () => {
         backgroundImage: `url(${parrall})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        minHeight: "450px",
+        height: "60vh",
         position: "relative",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        color: "#fff",
+        color: "#fff"
       }}
     >
       <div
