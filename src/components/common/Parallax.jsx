@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, Typography } from "antd";
 import { motion } from "framer-motion";
-import parrall from "../../assets/images/istockphoto-2165635291-612x612.webp";
+import parrall from "../../assets/images/istockphoto-536141357-612x612.webp";
 import resort from "../../assets/images/life-resort-hotel-resort-hotel-wallpaper-preview.jpg";
 
 const { Content } = Layout;
@@ -12,7 +12,6 @@ const Parallax = () => {
     <div
       style={{
         backgroundImage: `url(${parrall})`,
-        backgroundAttachment: "fixed",
         backgroundSize: "cover",
         backgroundPosition: "center",
         minHeight: "450px",

@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout, Typography, Row, Col } from "antd";
 import { motion } from "framer-motion";
-import services4 from "../../assets/images/istockphoto-2158090532-612x612.webp";
+import services4 from "../../assets/images/istockphoto-1480523491-612x612.webp";
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
